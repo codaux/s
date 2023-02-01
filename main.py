@@ -58,12 +58,15 @@ def webview():
 
 
 
-from github import Github
-# using an access token
-g = Github("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")
-repo = g.get_repo("codaux/s")
-print(repo)
 
-contents = repo.get_contents("sx.txt", ref="test")
-repo.update_file(contents.path, 'testsh', 'trse', contents.sha, branch='test')
-{'commit': Commit(sha="b06e05400afd6baee13fff74e38553d135dca7dc"), 'content': ContentFile(path="sx.txt")}
+
+import subprocess
+subprocess.Popen('git add sx.txt', shell=True)
+subprocess.Popen('git commit -m', shell=True)
+subprocess.Popen('git push origin master', shell=True)
+
+import os
+
+
+git commit -m "add newfile and some fixes"
+git push origin main
