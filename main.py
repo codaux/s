@@ -50,3 +50,10 @@ subprocess.Popen('git push origin main', shell=True)
 
 print('git repo updated ✅')
 
+
+from flask import Flask
+app = Flask('app')
+@app.route('/')
+def hello_world():
+	return alll
+app.run(host='0.0.0.0', port=8080)
